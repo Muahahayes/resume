@@ -1,0 +1,102 @@
+body {
+    background: linear-gradient(
+    to right,
+    #738c73 0%,
+    #738c73 27%,
+    #ffffff 27%,
+    #ffffff 100%
+    );
+    font-family: Cambria;    
+    overflow-x:hidden;
+}
+#personalInfo {
+    background: #006b31;
+    padding-top: 40px;
+    padding-left: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    position: relative;
+    height: 179px;
+}
+h3 {
+    font-size: 28pt;
+    text-shadow: 0 0 2px white;
+}
+h4 {
+    transform: translateY(-23px);
+    text-shadow: 0 0 1px #aaaaaa;
+}
+div.data {
+    position: relative;
+    left: 27%;
+    width: 73%;
+    transform: translateY(-80px);
+}
+div.categories {
+    width: 27%;
+    font-family: arial;
+    cursor: pointer;
+}
+p {
+    font-size: 14pt;
+}
+li {
+    font-size: 14pt;
+}
+#name {
+    text-align: center;
+}
+ul.contents {
+    list-style-type: none;
+    padding: 10px 0;
+    background-color:rgb(233, 233, 233);
+    position:fixed;
+    top: -16px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+    text-align:center;
+}
+ul.contents li {
+    display: inline-block;
+    text-align: center;
+    font-size: 18pt;
+    font-family: Cambria;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+ul.contents li:hover {
+    transform: scale(1.1, 1.2);
+}
+ul.contents li:active {
+    transform: scale(1, 1.1);
+}
+li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;   
+}
+li a:hover {
+    background-color: rgb(216,216,216);
+}
+li a:active {
+    background-color: rgb(200,240,200);
+}
+hr {
+    height: 2px;
+    color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.7);
+    margin-left: -10px;
+    margin-right: -10px;
+    transform: translateY(-20px);
+    border-bottom-color: rgba(0,0,0,0.1);
+    border-top-color: rgba(0,0,0,0.1);
+}
+div.personalInfo hr {
+    transform: translateY(-23px);
+}
+h4 a {
+    text-decoration: none;
+    color: black;
+}
