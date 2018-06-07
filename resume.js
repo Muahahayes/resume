@@ -1,61 +1,11 @@
-$().ready(displayFromJson);
-
-var resume = {
-    'personalInfo':{
-        'name':'Thomas A. Ord',
-        'phone':'(801)636-8166',
-        'email':'10582405@my.uvu.edu'
-    },
-
-    'education':[
-        {
-            'school':'Spanish Fork High School',
-            'date':'2006-2010',
-            'degree':'High School Diploma'
-        },
-        {
-            'school':'Utah Valley University',
-            'date':'2010-2018',
-            'degree':'In Progress (Computer Science with Psychology Minor)'
-        }
-    ],
-
-    'skills':[
-        'C++ Programming',
-        'C# Programming'
-    ],
-
-    'employment':[
-        {
-            'employer':'Village Green Pediatrics',
-            'date':'2014-2016',
-            'position':'Data Entry / Office Assistant',
-            'duties':'Entered chart information to Electronic Medical Record, Prepared charts, Organized storage area, Assisted with IT problems'
-        },
-        {
-            'employer':'Utah Physiatry',
-            'date':'2013',
-            'position':'Receptionist',
-            'duties':'Scheduled patients, Called insurance companies, Prepared charts'
-        },
-        {
-            'employer':'Mimi\'s Cafe',
-            'date':'2012-2013',
-            'position':'Busboy',
-            'duties':'Bussed tables, Cleaned kitchen/prep areas, Serviced customer needs.'
-        }
-    ],
-
-    'volunteering':[
-        {
-            'organization':'Tabitha\'s Way, Local Food Pantry',
-            'date':'2016',
-            'position':'Pantry Assistant',
-            'experience':'Welcomed clients, Walked clients through pantry, Checked clients out in the system, Brought stock from storage to the front'
-        }
-    ]
-};
-
+$().ready(callJson);
+var resume;
+function callJson() {
+    $.getJSON('https://raw.githubusercontent.com/Muahahayes/resume/master/resumeJSON.json', function(json){
+        resume = json;
+        displayFromJson();
+    });
+}
 function displayFromJson() {
     $('.categories').on('click', toggle);
     console.log(resume);
