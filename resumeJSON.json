@@ -25,16 +25,22 @@
 
     "employment":[
         {
+            "employer":"Crumbl Cookies Utah",
+            "date":"2018-Current",
+            "position":"Delivery Driver",
+            "duties":"Deliver cookies to customers using OnFleet mobile app for task tracking and navigation."
+        },
+        {
             "employer":"Village Green Pediatrics",
             "date":"2014-2016",
             "position":"Data Entry / Office Assistant",
-            "duties":"Entered chart information to Electronic Medical Record, Prepared charts, Organized storage area, Assisted with IT problems"
+            "duties":"Entered chart information to Electronic Medical Record, Prepared charts, Organized storage area, Assisted with IT problems."
         },
         {
             "employer":"Utah Physiatry",
             "date":"2013",
             "position":"Receptionist",
-            "duties":"Scheduled patients, Called insurance companies, Prepared charts"
+            "duties":"Scheduled patients, Called insurance companies, Prepared charts."
         },
         {
             "employer":"Mimi's Cafe",
@@ -49,7 +55,7 @@
             "organization":"Tabitha's Way, Local Food Pantry",
             "date":"2016",
             "position":"Pantry Assistant",
-            "experience":"Welcomed clients, Walked clients through pantry, Checked clients out in the system, Brought stock from storage to the front"
+            "experience":"Welcomed clients, Walked clients through pantry, Checked clients out in the system, Brought stock from storage to the front."
         }
     ]
 
