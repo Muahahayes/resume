@@ -25,7 +25,7 @@
 
     "employment":[
         {
-            "employer":"Crumbl Cookies Utah",
+            "employer":"Crumbl Cookies Utah<br><hr>",
             "date":"2018-Current",
             "position":"Delivery Driver",
             "duties":"Deliver cookies to customers using OnFleet mobile app for task tracking and navigation."

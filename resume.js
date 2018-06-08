@@ -26,7 +26,7 @@ function buildPersonal() {
     var str = '';
     var jsonP = resume.personalInfo;
     str += '<h3 id="name">' + jsonP.name + '</h3>';
-    str += '<h4>Phone: ' + jsonP.phone + '<h4>';
+    str += '<h4>Phone: ' + jsonP.phone + '</h4>';
     str += '<h4><a href="' + jsonP.email + '">Email: <u>' + jsonP.email + '</u></a></h4>';
     str += '<hr>';
     $('#personalInfo').html(str);
