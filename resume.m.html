@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Resume</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <style>
+            .ui-page-theme-a {
+                background-color:rgb(233, 255, 233);
+            }
+            h3 {
+                font-size: 200%;
+                font-family: arial;
+                background-color:#006b31;
+                color:white;
+            }
+            #personalInfo h3 {
+                font-family: Cambria;
+                display:flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            body {
+                font-family: Cambria;
+            }
+        </style>
+    </head>
+    
+    <body>
+            <div data-role="page" id="personalInfo">
+                <div data-role="header">
+                        <div data-role="navbar" class ="contents" id="contents">
+                                <ul class="contents">
+                                    <li><a href="resume.m.html#education" data-transition="flip" data-icon="arrow-r">Education</a></li>
+                                    <li><a href="resume.m.html#skills" data-transition="flip" data-icon="arrow-r">Skills</a></li>
+                                    <li><a href="resume.m.html#employment" data-transition="flip" data-icon="arrow-r">Employment History</a></li>
+                                    <li><a href="resume.m.html#other" data-transition="flip" data-icon="arrow-r">Volunteering</a></li>
+                                </ul>
+                        </div>
+                </div>
+                <h3>Thomas A. Ord</h3>
+                <h4>Phone: (801)636-8166</h4>
+                <h4> Email: 10582405@my.uvu.edu</h4>
+            </div>
+            <div data-role="page" id="education">
+                <div data-role="header">
+                        <div data-role="navbar" class ="contents" id="contents">
+                                <ul class="contents">
+                                    <li><a href="resume.m.html" data-transition="flip" data-icon="home">Contact Info</a></li>                 
+                                    <li><a href="resume.m.html#skills" data-transition="flip" data-icon="arrow-r">Skills</a></li>
+                                    <li><a href="resume.m.html#employment" data-transition="flip" data-icon="arrow-r">Employment History</a></li>
+                                    <li><a href="resume.m.html#other" data-transition="flip" data-icon="arrow-r">Volunteering</a></li>
+                                </ul>
+                        </div>
+                </div>                
+                <h3>Education</h3>
+                <p><strong>School:</strong> Spanish Fork High School</p>
+                <p><strong>Date:</strong> 2006-2010 <strong>Degree:</strong> High School Diploma</p><br>
+                <p><strong>School:</strong> Utah Valley University</p>
+                <p><strong>Date:</strong> 2010-2018 <strong>Degree:</strong> In Progress (Computer Science with Psychology Minor)</p>
+            </div>        
+            <div data-role="page" id="skills">
+                <div data-role="header">
+                        <div data-role="navbar" class ="contents ui-corner-all" id="contents">
+                                <ul class="contents">
+                                    <li><a href="resume.m.html" data-transition="flip" data-icon="home">Contact Info</a></li>
+                                    <li><a href="resume.m.html#education" data-transition="flip" data-icon="arrow-l">Education</a></li>
+                                    <li><a href="resume.m.html#employment" data-transition="flip" data-icon="arrow-r">Employment History</a></li>
+                                    <li><a href="resume.m.html#other" data-transition="flip" data-icon="arrow-r">Volunteering</a></li>
+                                </ul>
+                        </div>
+                </div> 
+                <h3>Skills</h3>               
+                <ul data-role="listview" data-inset="true">
+                    <li>C++</li>
+                    <li>C#</li>
+                    <li>HTML and CSS</li>
+                    <li>Javascript</li>
+                </ul>
+            </div>        
+            <div data-role="page" id="employment">
+                <div data-role="header">
+                        <div data-role="navbar" class ="contents" id="contents">
+                                <ul class="contents">
+                                    <li><a href="resume.m.html" data-transition="flip" data-icon="home">Contact Info</a></li>
+                                    <li><a href="resume.m.html#education" data-transition="flip" data-icon="arrow-l">Education</a></li>
+                                    <li><a href="resume.m.html#skills" data-transition="flip" data-icon="arrow-l">Skills</a></li>
+                                    <li><a href="resume.m.html#other" data-transition="flip" data-icon="arrow-r">Volunteering</a></li>
+                                </ul>
+                        </div>
+                </div>                
+                <h3>Employment History</h3>
+                <p><strong>Employer:</strong> Crumbl Cookies Utah</p>
+                <p><strong>Date:</strong> 2018-Current <strong>Position:</strong> Delivery Driver</p>
+                <p><strong>Duties:</strong> Deliver cookies to customers using OnFleet mobile app for task tracking and navigation.</p>
+                <br>
+                <p><strong>Employer:</strong> Village Green Pediatrics</p>
+                <p><strong>Date:</strong> 2014-2016 <strong>Position:</strong> Data Entry / Office Assistant</p>
+                <p><strong>Duties:</strong> Entered chart information to Electronic Medical Record, Prepared charts, Organized storage area, Assisted with IT problems.</p>
+                <br>
+                <p><strong>Employer:</strong> Utah Physiatry</p>
+                <p><strong>Date:</strong> 2013 <strong>Position:</strong> Receptionist</p>
+                <p><strong>Duties:</strong> Scheduled patients, Called insurance companies, Prepared charts.</p>
+                <br>
+                <p><strong>Employer:</strong> Mimi's Cafe</p>
+                <p><strong>Date:</strong> 2012-2013 <strong>Position:</strong> Busboy</p>
+                <p><strong>Duties:</strong> Bussed tables, Cleaned kitchen/prep areas, Serviced customer needs.</p>
+            </div>
+            <div data-role="page" id="other">
+                <div data-role="header">
+                        <div data-role="navbar" class ="contents" id="contents">
+                                <ul class="contents">
+                                    <li><a href="resume.m.html" data-transition="flip" data-icon="home">Contact Info</a></li>
+                                    <li><a href="resume.m.html#education" data-transition="flip" data-icon="arrow-l">Education</a></li>
+                                    <li><a href="resume.m.html#skills" data-transition="flip" data-icon="arrow-l">Skills</a></li>
+                                    <li><a href="resume.m.html#employment" data-transition="flip" data-icon="arrow-l">Employment History</a></li>
+                                </ul>
+                        </div>
+                </div>                
+                <h3>Volunteering</h3>
+                <p><strong>Organization:</strong> Tabitha's Way, Local Food Pantry</p>
+                <p><strong>Date:</strong> 2016 <strong>Position:</strong> Pantry Assistant</p>
+                <p><strong>Experience:</strong> Welcomed clients, Walked clients through pantry, Checked clients out in the system, Brought stock from storage to the front.</p>
+            </div>
+    </body>
+</html>
