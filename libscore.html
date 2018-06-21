@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="has-background-grey-lighter" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" 
+                href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"/>
+        <title>Web Dev Library Scores</title>
+    </head>
+    
+    <body>
+        <section class="hero is-primary is-small">
+            <div class="hero-body">
+                <h1 class="title has-text-centered">Library Comparing Tool</h1>
+            </div>
+        </section>
+        <section class="container">
+            <br>
+            <div id="results" class="container has-text-centered is-hidden">
+                <div class="columns is-centered is-multiline" id="libraries">
+                </div>
+                <form action="libscore.html" method="POST">
+                    <button class="button is-rounded is-info">Reset</button>
+                </form>
+            </div>
+            <br>
+            <div class="container has-text-centered compare">
+                <h1 class="title tag is-light is-large">Enter two or more Libraries to compare</h1>
+            </div>
+            <br>
+            <div class="tile is-ancestor has-text-centered compare">
+                <form method="GET" class="is-light tile is-parent">
+                    <div class="tile is-child is-3"></div>
+                    <div class="is-light tile is-child box is-6">
+                        <div id="inputs" class="field">
+                            <input type="text" placeholder="library" name="text1" 
+                                    class="control is-expanded">
+                            <br>
+                            <input type="text" placeholder="library" name="text2" 
+                                    class="control is-expanded">
+                            <br>
+                        </div>                    
+                        <p class="tag button" onclick="addTextBox()">+</p>
+                        <br>
+                        <br>
+                        <div>
+                            <input type="submit" class="button is-rounded is-info">
+                        </div>
+                    </div>
+                    <div class="tile is-child is-3"></div>
+                </form>
+            </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+            var texts = 2;  //global variable for addTextBox function
+            $().ready(queryLibraries);
+            function queryLibraries(){
+                if(window.location.search){
+                    var qStr = window.location.search;
+                    var qArr = [];
+                    qStr = qStr.split('?')[1];
+                    qStr = qStr.split('&');
+                    for(var qry of qStr){
+                        qArr.push(qry.split('=')[1]);
+                    }
+                    qArr.forEach(function(lib) {
+                        lib = lib.replace(/\++/, '');
+                        lib = lib.split('+')[0];
+                        if(lib == ''){
+                            lib = 'No Name'
+                        }
+                        var result = '<div class="column is-3 ' + lib + 'Fail">' +
+                                    '<div class="card">' +
+                                    '<div class="card-content">' +
+                                    '<h1 class="title">'+ lib +'</h1><br>' +
+                                    '<h2 class="subtitle">Score Not Found</h2>' +
+                                    '</div></div></div>';
+                        $('#libraries').html($('#libraries').html() + result);                        
+                        $.getJSON('https://api.npms.io/v2/package/' + lib, function(json){
+                            var score = json.score.final * 100;
+                            var result = '<div class="column is-3">' +
+                                        '<div class="card">' +
+                                        '<div class="card-content">' +
+                                        '<h1 class="title">' + lib + '</h1>' +
+                                        '<h2 class="title">' + Math.floor(score) + '</h2>' +
+                                        '</div></div></div>';
+                            $('#libraries').html($('#libraries').html() + result);
+                            $('.' + lib + 'Fail').addClass('is-hidden');
+                        });
+                    });
+                    $('#results').removeClass('is-hidden');
+                    $('.compare').addClass('is-hidden');
+                }
+                else{
+                    $('#results').addClass('is-hidden');
+                    $('.compare').removeClass('is-hidden');
+                }
+            };  
+            function addTextBox(){
+                var textbox = '<input type="text" placeholder="library" name="text'+
+                                ++texts + '" class="control is-expanded"> <br>';
+                $('#inputs').html($('#inputs').html() + textbox);
+            };
+        </script>
+    </body>
+</html>
